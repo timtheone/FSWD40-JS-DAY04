@@ -29,3 +29,13 @@ function read(args) {
 }
 
 read(library);
+
+//Exercise 2
+
+function truncate (a, b) {
+  result =  a.slice(0, b);
+  return result
+}
+
+var hero = "I am a hero from World of Warcraft"
+document.getElementById('ph').innerHTML = truncate(hero, 12);
