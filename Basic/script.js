@@ -74,3 +74,46 @@ window.onload = function() {
 
   document.getElementById("button1").addEventListener("click", table);
 };
+
+//Basic exercise 4
+
+function HotelConstructor(name) {
+  this.name = name;
+  this.availability = function() {
+    return Math.floor((Math.random()*10) +1);
+  }
+}
+
+var hotel1 = new HotelConstructor('Hilton');
+var hotel2 = new HotelConstructor('HolidayInn');
+var hotel3 = new HotelConstructor('Marriot');
+
+var hotels = [
+  hotel1,
+  hotel2,
+  hotel3
+]
+
+btn.onclick = function check() {
+  var input1 = Number(document.getElementById('h1').value);
+  var input2 = Number(document.getElementById('h2').value);
+  var input3 = Number(document.getElementById('h3').value);
+
+  if(input1 <= hotel1.availability()){
+    console.log('Hilton is available.');
+  } else {
+    console.log('Hilton is NOT available.');
+  }
+
+  if(input2 <= hotel2.availability()){
+    console.log('HolidayInn is available.');
+  } else {
+    console.log('HolidayInn is NOT available.');
+  }
+
+  if(input3 <= hotel3.availability()){
+    console.log('Marriot is available.');
+  } else {
+    console.log('Marriot is NOT available.');
+  }
+}
